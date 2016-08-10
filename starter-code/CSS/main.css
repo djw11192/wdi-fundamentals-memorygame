@@ -1,0 +1,20 @@
+h1 {
+      color: rgb(2, 132, 130);
+    }
+h2 {
+      color: #ffd700;
+    }
+
+
+.board {
+  height: 80%;
+  width: 100px;
+  display: inline-block;
+}
+.card {
+ height: 200px;
+  width: 150px;
+  background-color: yellow;
+  border: solid black 1px;
+  border-radius: 10px;
+}
