@@ -9,9 +9,9 @@ if (cardTwo === cardFour){
 } else {
 	alert("Sorry, try again.")
 }*/
-alert("Yay");
 
 var cards = ['queen', 'queen', 'king', 'king'];
+
 var cardsInPlay = [];
 
 var getGameBoard = document.getElementById('game-board');
@@ -23,14 +23,13 @@ for(var i = 0; i < cards.length; i++){
   cardDivs.setAttribute('data-card', cards[i]);
   cardDivs.addEventListener('click', isTwoCards);
   getGameBoard.appendChild(cardDivs);
+  
+  
 }
 };
- var isMatch = function(){
- 	cardsInPlay[0] === cardsInPlay[1]; 
- }
 
 
-var isTwoCards = function(){
+function isTwoCards(){
   cardsInPlay.push(this.getAttribute('data-card'));
   console.log(this.getAttribute('data-card'));
   if (this.getAttribute('data-card') === 'king') {
@@ -47,7 +46,17 @@ var isTwoCards = function(){
 
     // clear cards in play array for next try
     cardsInPlay = [];
-
+    
   }
+}
+ function isMatch(cards){
+   if(cards[0]===cards[1]){
+     alert("You found a match!");
+   } else {
+     alert("sorry, try again");
+   }  
+ }
+
+
 
   createBoard();
